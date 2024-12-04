@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/log_in"
+    app:startDestination="@id/splashscreen">
+
+    <fragment
+        android:id="@+id/country"
+        android:name="com.tarun.internproject.country"
+        android:label="fragment_country"
+        tools:layout="@layout/fragment_country" >
+        <action
+            android:id="@+id/action_country_to_loginpage"
+            app:destination="@id/loginpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginpage"
+        android:name="com.tarun.internproject.loginpage"
+        android:label="fragment_loginpage"
+        tools:layout="@layout/fragment_loginpage" >
+        <action
+            android:id="@+id/action_loginpage_to_otplogin"
+            app:destination="@id/otplogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/getstarted"
+        android:name="com.tarun.internproject.getstarted"
+        android:label="fragment_getstarted"
+        tools:layout="@layout/fragment_getstarted" >
+        <action
+            android:id="@+id/action_getstarted_to_teamscreen"
+            app:destination="@id/teamscreen" />
+        <action
+            android:id="@+id/action_getstarted_to_country"
+            app:destination="@id/country" />
+    </fragment>
+    <fragment
+        android:id="@+id/teamscreen"
+        android:name="com.tarun.internproject.teamscreen"
+        android:label="fragment_teamscreen"
+        tools:layout="@layout/fragment_teamscreen" >
+        <action
+            android:id="@+id/action_teamscreen_to_country"
+            app:destination="@id/country" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashscreen"
+        android:name="com.tarun.internproject.splashscreen"
+        android:label="fragment_splashscreen"
+        tools:layout="@layout/fragment_splashscreen" >
+        <action
+            android:id="@+id/action_splashscreen_to_getstarted"
+            app:destination="@id/getstarted" />
+    </fragment>
+    <fragment
+        android:id="@+id/otplogin"
+        android:name="com.tarun.internproject.otplogin"
+        android:label="fragment_otplogin"
+        tools:layout="@layout/fragment_otplogin" />
+</navigation>
